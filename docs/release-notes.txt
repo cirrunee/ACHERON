@@ -1,0 +1,67 @@
+ACHERON — Binary Analysis & Decompilation Platform
+ACHERON // CHARON — AI-Assisted Binary Investigation Environment
+Created by cirrune.
+
+Desktop 0.4 — 32-bit support and any-file inspection
+
+The x86/PE32 rejection is fixed. Windows 32-bit executables now use a 32-bit
+iced-x86 decoder, EAX/ESP registers, EFLAGS, correct address widths and stack
+operations. The known-source 32-bit sample is available from File. Existing x64
+projects still load; new analysis uses engine 0.2 and project schema 1.
+
+Any readable regular file can open for bounded inspection. Text/source/data,
+ZIP/Office containers, media, other executable formats and unknown binaries show
+available metadata, text, strings, archive listings and raw bytes. Unsupported
+code analysis falls back to inspection with a reason. This is not universal
+source recovery, decryption or complete interpretation of every format.
+
+CHARON can explain file excerpts as well as code. File evidence uses byte offsets.
+Download results and saved projects preserve extracted contents and AI answers.
+Limits: first 8 MB string scan, 2,000 strings, 64,000 text characters, 64 KB byte
+preview and 2,000 ZIP entries. Whole-file hashes cover all bytes. Office previews
+are partial text extractions, and ZIP64/multi-volume files retain byte inspection.
+
+Earlier desktop 0.3 — Easier AI and readable downloads
+
+New installs start in Easy mode (formerly Dumbass mode). The toolbar focuses on
+Open file, Download results and AI settings. Advanced features remain in menus.
+AI help offers preset questions, a persistent custom-question box, one Explain
+action, elapsed time, Stop, an answer overview and collapsible supporting code.
+Model setup offers Download and use / Use this model. Cloud sending is explicit.
+
+Download results creates one UTF-8 .txt file for the whole file or one section:
+recovered code, extracted details, AI explanations and optional instructions.
+It previews content, writes in the background, preserves existing files and
+removes cancelled partial output. Save explanation uses the same workflow.
+AI summaries survive project save/reload even with no individual findings.
+The analysis engine and project schema remain unchanged.
+
+Earlier desktop 0.2 — Separate downloads, real local AI and Dumbass mode
+
+Base and CHARON now ship as separate portable Windows ZIPs. Extract the whole
+folder, then run ACHERON.exe (Base) or ACHERON-CHARON.exe (CHARON).
+The full CHARON ZIP includes Qwen2.5-Coder 7B Instruct Q4_K_M and official
+llama.cpp CPU/Vulkan runtimes. No Python installation or API key is needed locally.
+AI setup offers verified, resumable downloads of 1.5B, 7B and 14B coding models.
+Optional OpenAI support lists account models and keeps API keys only in memory.
+
+Dumbass mode simplifies both editions. Use the toolbar or Ctrl+Shift+D for
+plain-language facts, fewer controls, Code/Flow views and accessible evidence.
+Switch off to restore the detailed workspace. CHARON can explain the selected
+function in plain language and attach instruction references to its findings.
+
+AI findings stay HYPOTHESIZED with visible, uncalibrated model confidence. They
+can be reviewed, exported, and saved with a project. Deterministic artifacts stay
+separate. The model cannot execute binaries, browse, patch code or call tools.
+
+63 automated cases passed. A real local 7B model run also verified inference,
+evidence navigation and persisted findings. See docs/validation.md for scope.
+Cloud protocol tests passed; live cloud inference needs the user's API account.
+
+Creator attribution is cirrune in the application, About, package metadata and
+Windows properties. Model/runtime ownership and original notices remain separate.
+See CHARON GUIDE.txt, THIRD_PARTY.md, docs/provenance/ and licenses/.
+
+AIR — Acheron Intermediate Representation.
+The analysis engine remains version 0.1.0 to preserve project schema compatibility.
+Pseudocode is a conservative reconstruction and is not original source code.

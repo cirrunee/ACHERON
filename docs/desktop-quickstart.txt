@@ -1,0 +1,78 @@
+ACHERON
+===================
+Binary Analysis & Decompilation Platform
+Created by cirrune
+Desktop 0.4
+
+Base: double-click ACHERON.exe. CHARON: double-click ACHERON-CHARON.exe.
+The two editions have separate ZIP downloads. Extract the complete ZIP first.
+CHARON's local-model and optional cloud setup is described in CHARON GUIDE.txt.
+
+Easy mode (formerly Dumbass mode) starts on for new installations.
+Use the toolbar or Ctrl+Shift+D to switch between easy and advanced views.
+At a glance explains basic facts. The mode keeps Code, Flow and evidence
+accessible and restores the detailed workspace when switched off.
+
+Click Open file to select any readable regular file, or a saved .acheron project.
+Click Explore sample to try the included, redistributable example immediately.
+You can also drag a file onto the window.
+
+Select a function on the left. The center shows pseudocode, assembly, AIR,
+control flow and a call graph. Select a code line to inspect its original
+instruction and evidence. Double-click calls, references or graph nodes to
+navigate. Alt+Left returns to the previous function.
+
+Ctrl+Home inspects the entry point. Ctrl+K finds a function; Enter opens the first
+match. Ctrl+R focuses callers and calls. Alt+1 through Alt+5 switch code/graph
+views. Ctrl+F searches code; F3/Shift+F3 move between matches. Alt+Left/Right
+restore previous/next locations. Ctrl+L shows the analysis log. F1 lists shortcuts.
+
+The entry-evidence score is a heuristic for the candidate function entry, not a
+probability and not pseudocode accuracy. Unknown signatures remain labeled unknown.
+Source addresses appear in the code margin. Original exports retain full mappings.
+
+Graph controls: drag to pan, Ctrl+mouse wheel to zoom, Fit graph to reset.
+Download results saves one readable text file, for the whole file or this section.
+Select recovered code, extracted file details, AI explanations, or original
+instructions. Click Save text file, choose a new filename, then Open saved file.
+Ctrl+Shift+S opens this download dialog. No network connection is needed.
+
+File > Save project preserves analysis for reopening. In advanced mode, More
+offers project saving, analysis logs and code/AIR/DOT/JSON exports.
+Outputs use new filenames; existing files are preserved.
+
+No Python installation, terminal commands or internet connection are needed.
+Keep ACHERON.exe and the _internal folder together. To move the application,
+copy this entire folder. It is a portable application, not an installer.
+
+Supported code analysis: native Windows x86 PE32 and x64 PE32+ binaries.
+Other architectures and managed code open in File contents for inspection.
+Advanced type/class recovery and SSA remain unsupported. Pseudocode is
+a conservative machine-state reconstruction, not original source.
+
+All target analysis is static. The selected EXE/DLL is never executed.
+The analysis process is separate from the UI and can be stopped with Cancel.
+
+ACHERON source: supplied alongside this portable app in the project folder.
+ACHERON itself: Created by cirrune. License: MIT.
+Third-party components retain their own copyright and licenses; see THIRD_PARTY.md,
+THIRD-PARTY-NOTICES.txt
+and licenses/. Qt libraries are dynamically linked and may be replaced with
+compatible versions; this application adds no restrictions on debugging such
+library modifications.
+
+ANY-FILE INSPECTION
+Text, data, documents, archives, media and unknown binaries open in File contents.
+Read File details, Readable text, Strings, Archive contents (when available), or
+Raw bytes. Search within the current view. Double-click a string to inspect its
+file offset. No content is executed, and archive members are never written to disk.
+
+Download results saves extracted text/strings, details, archive entries and optional
+raw bytes in one text file. In CHARON, Explain with AI works on the extracted
+file excerpt. Every file opens into a supported inspection view; that does not
+mean every file format can be decompiled, decrypted, or fully interpreted.
+
+Inspection scans the first 8 MB for up to 2,000 strings, previews up to 64,000 text
+characters and 64 KB of bytes. The hash covers the full file. ZIP listings are
+bounded to 2,000 entries; ZIP64/multipart archives keep byte inspection. Office
+previews omit layout and some parts. Limits appear in the app and exported report.

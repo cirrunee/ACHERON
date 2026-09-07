@@ -1,0 +1,60 @@
+{
+  "compiler": "Zig 0.13.0 (bundled Clang/LLD)",
+  "license": "MIT",
+  "binaries": [
+    {
+      "file": "known_O0.exe",
+      "sha256": "e8bf28d0811cca1c3495375857ebc3c43aab81a7c61aaf9f653114d2a191cc4e",
+      "flags": [
+        "cc",
+        "-target",
+        "x86_64-windows-msvc",
+        "-O0",
+        "-fno-stack-protector",
+        "-fno-sanitize=all",
+        "-nostdlib",
+        "-Wl,--entry,entry",
+        "-Wl,--subsystem,console",
+        "known_source.c",
+        "-o",
+        "known_O0.exe"
+      ]
+    },
+    {
+      "file": "known_O1.exe",
+      "sha256": "c7f73cd4e3dd3cc18d30539cf3f05e041f2c44f9da34564fc66b29bf2de01de3",
+      "flags": [
+        "cc",
+        "-target",
+        "x86_64-windows-msvc",
+        "-O1",
+        "-fno-stack-protector",
+        "-fno-sanitize=all",
+        "-nostdlib",
+        "-Wl,--entry,entry",
+        "-Wl,--subsystem,console",
+        "known_source.c",
+        "-o",
+        "known_O1.exe"
+      ]
+    },
+    {
+      "file": "known_x86_O0.exe",
+      "sha256": "57e804300ffcfcc0034f694a2590a969d0c66b777acbbab06b64914f8ba977aa",
+      "flags": [
+        "cc",
+        "-target",
+        "x86-windows-msvc",
+        "-O0",
+        "-fno-stack-protector",
+        "-fno-sanitize=all",
+        "-nostdlib",
+        "-Wl,--entry,entry",
+        "-Wl,--subsystem,console",
+        "known_source.c",
+        "-o",
+        "known_x86_O0.exe"
+      ]
+    }
+  ]
+}

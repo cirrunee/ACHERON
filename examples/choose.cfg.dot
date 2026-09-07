@@ -1,0 +1,11 @@
+digraph "cfg_401020" {
+  node [shape=box,fontname="Consolas"];
+  b401020 [label="401020: push rbp\l401021: push rax\l401022: mov rbp,rsp\l401025: mov [rbp],ecx\l401028: cmp dword [rbp],4\l40102c: jle near 0x0000000000401040\l"];
+  b401020 -> b401040 [label="true"];
+  b401020 -> b401032 [label="false"];
+  b401032 [label="401032: mov eax,[rbp]\l401035: sub eax,3\l401038: mov [rbp+4],eax\l40103b: jmp 0x0000000000401049\l"];
+  b401032 -> b401049 [label="jump"];
+  b401040 [label="401040: mov eax,[rbp]\l401043: add eax,7\l401046: mov [rbp+4],eax\l"];
+  b401040 -> b401049 [label="fallthrough"];
+  b401049 [label="401049: mov eax,[rbp+4]\l40104c: add rsp,8\l401050: pop rbp\l401051: ret\l"];
+}

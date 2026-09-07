@@ -1,0 +1,93 @@
+ACHERON // CHARON — AI-Assisted Binary Investigation Environment
+Created by cirrune.
+
+RUN IT
+Extract the complete CHARON ZIP to a writable folder, then double-click
+ACHERON-CHARON.exe. Keep _internal/, runtime/ and data/ beside the executable.
+The full download includes Qwen2.5-Coder 7B Instruct Q4_K_M (4.68 GB of weights).
+On first use after extraction, CHARON verifies the model before loading it.
+No Python installation or API key is needed for local AI.
+
+1. Choose Explore sample or open any readable file or saved project.
+2. Select a section, then open AI help.
+3. Choose a question and click Explain. The included model loads automatically.
+4. Read Answer overview. Select a hypothesis for Supporting code and review.
+5. Click Save explanation for a text file, or Download results for a full report.
+
+Ask my own question reveals a text box. Stop cancels the request and preserves
+existing answers. File > Save project keeps the complete analysis and AI answers
+for reopening, including answers without individual findings.
+
+If your GPU cannot run the model, open AI settings, select CPU and Use this model.
+The bundled CPU and Vulkan GPU engines are official llama.cpp builds.
+The model stays loaded until you choose Unload model or close CHARON.
+
+EASY MODE (FORMERLY DUMBASS MODE)
+New installs start in Easy mode. Use the toolbar button or Ctrl+Shift+D to switch.
+This mode hides advanced
+tabs, raw address controls and the side inspector. At a glance explains the basic
+facts. Code and Flow remain available. Explain with AI opens the
+CHARON investigation page with a plain-language prompt. Switch the mode off to
+restore the full workspace. Detailed views can also be opened from the View menu.
+
+REAL MODEL CHOICES
+AI settings includes official Qwen2.5-Coder Instruct Q4_K_M models:
+1.5B: 1.12 GB download; lighter and less reliable than the larger models.
+7B:   4.68 GB download; the default, included in the full CHARON package.
+14B:  8.99 GB download; needs more memory.
+Memory estimates in the app are approximate; context length and hardware matter.
+Downloads use pinned revisions and SHA-256 verification. Pause preserves the
+partial file; Resume and use resumes it. Use this model selects installed weights;
+Download and use downloads, verifies and loads a model with one action.
+Existing weights can be verified offline.
+
+OPTIONAL CLOUD AI
+In AI settings, open Cloud, paste your OpenAI API key and load your available models.
+Select a Responses-compatible text model that supports structured output, then
+choose Use OpenAI. Model names come from your account; you can enter an exact ID.
+The key stays in memory for this session. It is not stored in settings, projects,
+exports or command-line arguments. API usage is billed by your provider.
+What gets sent? shows the exact input. Send to OpenAI & explain sends that
+function excerpt to api.openai.com. The full binary and local path are not sent.
+Requests set store=false. Consult your provider's policies for data handling.
+
+HOW TO READ RESULTS
+All AI findings are HYPOTHESIZED, including ones marked Useful hypothesis.
+Confidence is the model's uncalibrated self-assessment, not a probability.
+Evidence IDs are checked against actual supplied instructions. Resolving a link
+does not prove the interpretation. Unknown citations are flagged and cannot open
+invented addresses. Original deterministic artifacts are never overwritten.
+Save project preserves evidence, model ID, provider, prompt hash, input scope,
+limitations and review decisions. Save explanation creates a readable text copy.
+
+DOWNLOAD RESULTS
+Choose the whole file or just this section. Include recovered code, extracted
+file details, AI explanations, and optionally original instructions. The preview
+may be shortened; Save text file writes the full selection. Choose a new .txt
+filename, then click Open saved file. It opens in Notepad or any text editor.
+Existing files are preserved. Cancel removes an unfinished report. Recovered code
+is pseudocode, not original source or a runnable program. Advanced code, AIR, DOT
+and JSON exports remain in the More menu. Text reports cannot be reopened as
+editable ACHERON projects; use File > Save project for that.
+
+SCOPE
+The AI reads at most 100 instructions plus a bounded pseudocode excerpt from the
+selected function. It cannot execute binaries, patch files, browse, or call tools.
+The combined input is further limited to 14,000 characters; omitted instructions
+or pseudocode are explicitly marked in the preview and the saved input scope.
+It is not a whole-program autonomous analysis or vulnerability-verification agent.
+The Base edition has the same analysis workspace and simplified mode, without
+the AI runtime or model weights. It remains fully offline.
+
+Model weights belong to Qwen under Apache-2.0. llama.cpp and other components
+retain their respective licenses and authors. See THIRD_PARTY.md and licenses/.
+
+DESKTOP 0.4: FILE AI AND 32-BIT PROGRAMS
+Windows x86 PE32 programs now support code investigation alongside x64 programs.
+For other files, File contents shows available text, strings, archive entries and
+bytes. Explain with AI switches to file questions and reads a bounded excerpt.
+The preview shows exactly what will be sent. File evidence uses byte offsets, not
+virtual instruction addresses. Model output stays a separate hypothesis.
+Document text may have no byte mapping; no mapping is invented for it. Save
+explanation and Download results include file AI answers. Unknown/encrypted formats
+remain byte-level inspections without a claim of decompilation or decryption.

@@ -1,0 +1,8 @@
+{
+  "fixture": "known_O0.exe",
+  "functions": 5,
+  "instructions": 74,
+  "opaque_operations": 0,
+  "sha256": "e8bf28d0811cca1c3495375857ebc3c43aab81a7c61aaf9f653114d2a191cc4e",
+  "example_function": "0x401020"
+}

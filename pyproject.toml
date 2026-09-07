@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acheron-re"
+version = "0.4.0"
+description = "ACHERON — Binary Analysis & Decompilation Platform"
+authors = [{name = "cirrune"}]
+requires-python = ">=3.11"
+dependencies = ["iced-x86==1.21.0"]
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+test = ["pytest==8.3.5"]
+desktop = ["PySide6-Essentials==6.8.3"]
+build = ["pyinstaller==6.16.0"]
+
+[project.scripts]
+acheron = "acheron.cli:main"
+
+[project.gui-scripts]
+acheron-desktop = "acheron.desktop:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"acheron.ai" = ["catalog.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,0 +1,29 @@
+ACHERON Desktop third-party components
+
+ACHERON — Binary Analysis & Decompilation Platform
+Created by cirrune. This first-party attribution does not claim ownership of
+the third-party components listed below. Their notices remain unchanged.
+
+ACHERON source and fixtures: MIT (see LICENSE.txt).
+
+Qt for Python / PySide6 Essentials 6.8.3 and Shiboken 6.8.3
+Used under LGPLv3. The application dynamically loads these libraries from
+_internal. Copies of distribution license notices are included in licenses/.
+Upstream source and license information:
+https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.8.3-src.tar.xz
+https://download.qt.io/archive/qt/6.8/6.8.3/single/
+https://doc.qt.io/qtforpython-6/licenses.html
+https://www.qt.io/licensing/open-source-lgpl-obligations
+
+iced-x86 1.21.0: MIT
+https://github.com/icedland/iced
+
+Python 3.12 runtime: Python Software Foundation License
+https://www.python.org/downloads/source/
+
+PyInstaller 6.16.0: GPL-2.0-or-later with bootloader exception permitting
+distribution of bundled applications under their own licenses.
+https://pyinstaller.org/en/stable/license.html
+
+This portable distribution contains unmodified third-party libraries.
+The corresponding source is available at the upstream links above.
