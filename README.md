@@ -4,6 +4,13 @@ Binary Analysis & Decompilation Platform
 
 **Created by cirrune.**
 
+**[Download the Windows apps from Releases](https://github.com/cirrunee/ACHERON/releases/latest).**
+Choose the Base ZIP for file/code inspection, or the CHARON ZIP for AI help too.
+Extract all files and double-click `ACHERON.exe` or `ACHERON-CHARON.exe`.
+No Python installation is needed. In the GitHub CHARON download, open **AI settings**
+and click **Download and use** to install a real local model. Model weights are
+downloaded separately; the CPU/Vulkan runtimes are included.
+
 Desktop 0.4 opens any readable regular file for bounded inspection: text, strings,
 metadata, archive entries and raw bytes. Word/PowerPoint XML text and Excel shared
 text can be previewed in ZIP-based Office documents. Windows x86 (32-bit PE32)
@@ -22,7 +29,7 @@ readable `.txt` file. Choose the whole file or just the selected function.
 
 In CHARON, select **AI help**, choose a ready-made question and click **Explain**.
 Read the answer overview, then select a hypothesis for its supporting code.
-**Save explanation** downloads a text copy. The included model loads automatically.
+**Save explanation** downloads a text copy. Installed models load automatically.
 
 The Base desktop uses a compact shared design system: claim-specific entry
 confidence, source-address gutters, normal text selection, code search, keyboard
@@ -39,7 +46,7 @@ and 14B coding models, and supports optional OpenAI Responses models with a
 session-only API key. Findings retain evidence, model provenance and limitations
 as separate hypotheses. [CHARON guide](docs/charon-quickstart.txt).
 
-**To run: double-click `ACHERON Base` or `ACHERON CHARON` in the project folder**,
+**For the locally built full bundles: double-click `ACHERON Base` or `ACHERON CHARON` in the project folder**,
 or open `outputs/ACHERON-Base-0.4/ACHERON.exe` or
 `outputs/ACHERON-CHARON-0.4/ACHERON-CHARON.exe`.
 Click **Open file** for any readable regular file, or **Explore sample** for a
@@ -68,7 +75,10 @@ Fetch the pinned official runtimes with `python tools/fetch_ai_runtime.py`, then
 rebuild with `python tools/build_desktop.py --with-model` and package with
 `python tools/package_portable.py`. The model-inclusive build requires the 7B model
 to be downloaded and verified in source CHARON first; omit `--with-model` to ship
-the application with its in-app model downloader instead.
+the application with its in-app model downloader instead. Run
+`python tools/package_portable.py --github` to create versioned Base and CHARON
+release ZIPs, a manifest and SHA-256 checksums under `outputs/github/v0.4.0/`.
+The GitHub CHARON ZIP excludes weights even when a full local bundle exists.
 
 ## Analysis engine and CLI
 
